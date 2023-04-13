@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap');
+
+*, *::after, *::before {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 16px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+  height: 100vh;
+  display: flex;
+  width: 1080px;
+  margin-inline: auto;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.board {
+  width: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 2px solid black;
 }
-
-.App-link {
-  color: #61dafb;
+.board-row {
+  display: flex;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.square {
+  width: 100px;
+  aspect-ratio: 1;
+  border: 2px solid black;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  padding: 10px 10px; 
+  cursor: pointer;
+}
+.square-x {
+  color: red;
+}
+.square-o {
+  color: yellow;
 }
