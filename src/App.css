@@ -8,22 +8,24 @@
 body {
   font-family: 'Lexend Deca', sans-serif;
   font-size: 16px;
+  background-color: #29273c;
 }
-.container{
+.container {
   height: 100vh;
   display: flex;
   width: 1080px;
   margin-inline: auto;
   padding: 20px;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 .board {
   width: 300px;
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
+  border: 5px solid #29273c;
 }
 .board-row {
   display: flex;
@@ -31,16 +33,44 @@ body {
 .square {
   width: 100px;
   aspect-ratio: 1;
-  border: 2px solid black;
+  border: 5px solid #29273c;
   font-family: 'Lexend Deca', sans-serif;
   font-weight: 700;
   font-size: 55px;
   padding: 10px 10px; 
   cursor: pointer;
+  background-color: #16141f;;
 }
 .square-x {
-  color: red;
+  color: #812ddc;
 }
 .square-o {
-  color: yellow;
+  color: #ffffff;
+}
+.status {
+  font-size: 22px;
+  font-family: 'Lexend Deca', sans-serif;
+  color: #ffffff;
+}
+.title {
+  font-size: 30px;
+  font-family: 'Lexend Deca', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.restart-button {
+  background-color: #812ddc;
+  border: 2px solid #812ddc;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+}
+.functionality {
+  display: flex;
+  gap: 40px;
+  align-items: baseline;
 }
