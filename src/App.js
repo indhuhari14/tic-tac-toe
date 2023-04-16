@@ -24,9 +24,11 @@ function App() {
   }
   const winner = calculateWinner(squares);
   let status;
-  if(winner) {
+  if(winner === "X" || winner === "O") {
     status = "Winner is " + winner;
-  } else {
+  } else if(winner === "draw"){
+    status = "The game is draw";
+  }else {
     status = "Next player is " + (xIsNext ? "X" : "O");
   }
   return (
@@ -70,9 +72,12 @@ function calculateWinner(squares) {
     [2, 4, 6]
   ];
   for(let i = 0; i < lines.length; i++) {
+    let isWinner = null;
     const[a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
+    } else if(!isWinner && squares.every(square => square !== null)) {
+      return "draw";
     }
   }
   return null;
